@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PhoTavCtrl.h
 //  备忘录
 //
 //  Created by Phoenix on 2017/3/28.
@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
-
+#import "ItemCell.h"
+#import "DetailController.h"
+#import "ItemStore.h"
+@interface PhoTavCtrl : UITableViewController
 
 @end
-
