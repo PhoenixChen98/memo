@@ -53,11 +53,11 @@
 -(void)saveChanges{
     NSString *path=[self itemArchivePath];
     [NSKeyedArchiver archiveRootObject:self.allItems toFile:path];
-    
 }
 -(NSString *)itemArchivePath{
     NSArray *documentDirectories=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectory=documentDirectories[0];
+    NSLog(@"%@",[documentDirectory stringByAppendingPathComponent:@"items.archive"]);
     return [documentDirectory stringByAppendingPathComponent:@"items.archive"];
 }
 @end

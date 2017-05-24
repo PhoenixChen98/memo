@@ -22,8 +22,8 @@
                                                                       target:self
                                                                       action:@selector(addItem:)];
     self.navigationItem.rightBarButtonItem=addBtn;
-    UIBarButtonItem *editBtn=[[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(editItem:)];
-    self.navigationItem.leftBarButtonItem=editBtn;
+//    UIBarButtonItem *editBtn=[[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(editItem:)];
+    self.navigationItem.leftBarButtonItem=self.editButtonItem;
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -35,16 +35,15 @@
     [self tableView:self.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     
 }
--(IBAction)editItem:(UIBarButtonItem *)sender{
-    if ([sender.title isEqual:@"完成"]) {
-        sender.title=@"编辑";
-        [self setEditing:NO animated:YES];
-    } else {
-        sender.title=@"完成";
-        [self setEditing:YES animated:YES];
-    }
-    
-}
+//-(IBAction)editItem:(UIBarButtonItem *)sender{
+//    if ([sender.title isEqual:@"完成"]) {
+//        sender.title=@"编辑";
+//        [self setEditing:NO animated:YES];
+//    } else {
+//        sender.title=@"完成";
+//        [self setEditing:YES animated:YES];
+//    }
+//}
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
     return @"删除";
 }
